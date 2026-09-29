@@ -1,0 +1,4 @@
+# One person per line. LinkedIn profile link, then their public Instagram (link or @handle).
+# Paste this whole block into "Paste a list" on the home page.
+https://www.linkedin.com/in/example-person, https://www.instagram.com/example_person
+https://www.linkedin.com/in/another-person, @another_person

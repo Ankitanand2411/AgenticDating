@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-padding-top: 5rem;
+}
+
+body {
+  @apply bg-ink text-paper font-body antialiased;
+  background-image: radial-gradient(1200px 600px at 80% -10%, rgba(242, 125, 152, 0.10), transparent 60%),
+    radial-gradient(900px 500px at -10% 30%, rgba(230, 194, 122, 0.06), transparent 60%);
+}
+
+a {
+  @apply underline-offset-4;
+}
+
+::selection {
+  background: rgba(242, 125, 152, 0.35);
+}
+
+:focus-visible {
+  outline: 2px solid #f27d98;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.prose-quiet p + p {
+  margin-top: 0.75rem;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
+}
+.live-dot {
+  animation: pulse-dot 1.2s ease-in-out infinite;
+}
